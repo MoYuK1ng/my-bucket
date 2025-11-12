@@ -1,0 +1,39 @@
+{
+    "version": "1.4.5-1110",
+    "description": "Yakit - 网络安全集成化单兵工具",
+    "homepage": "https://github.com/yaklang/yakit",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/yaklang/yakit/releases/download/v1.4.5-1110/Yakit-1.4.5-1110-windows-amd64.exe",
+            "hash": "https://github.com/yaklang/yakit/releases/download/v1.4.5-1110/Yakit-1.4.5-1110-windows-amd64.exe.sha256"
+        }
+    },
+    "bin": "Yakit-1.4.5-1110-windows-amd64.exe",
+    "shortcuts": [
+        [
+            "Yakit-1.4.5-1110-windows-amd64.exe",
+            "Yakit"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/yaklang/yakit"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/yaklang/yakit/releases/download/v$version/Yakit-$version-windows-amd64.exe",
+                "hash": {
+                    "url": "$url.sha256"
+                },
+                "bin": "Yakit-$version-windows-amd64.exe",
+                "shortcuts": [
+                    [
+                        "Yakit-$version-windows-amd64.exe",
+                        "Yakit"
+                    ]
+                ]
+            }
+        }
+    }
+}
